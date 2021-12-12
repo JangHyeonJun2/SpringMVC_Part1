@@ -28,7 +28,7 @@ public class MeberSaveControllerV1 implements ControllerV1 {
         String viewPath = "WEB-INF/views/save-result.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
-        response.setContentType("text/html");
+//        response.setContentType("text/html");
 
 //        response.setContentType("text/html");
 //        response.setCharacterEncoding("utf-8");
