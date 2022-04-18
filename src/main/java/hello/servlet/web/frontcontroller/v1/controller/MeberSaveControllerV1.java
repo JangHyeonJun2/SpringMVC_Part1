@@ -25,7 +25,7 @@ public class MeberSaveControllerV1 implements ControllerV1 {
         //Modelㅇㅔ 데이터를 보관한다.
         request.setAttribute("member", member);
 
-        String viewPath = "WEB-INF/views/save-result.jsp";
+        String viewPath = "/WEB-INF/views/save-result.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
         dispatcher.forward(request, response);
 //        response.setContentType("text/html");
