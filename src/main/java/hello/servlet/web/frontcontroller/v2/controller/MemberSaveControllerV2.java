@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class MeberSaveControllerV2 implements ControllerV2 {
+public class MemberSaveControllerV2 implements ControllerV2 {
     private final MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
@@ -19,10 +19,10 @@ public class MeberSaveControllerV2 implements ControllerV2 {
         int age = Integer.parseInt(request.getParameter("age"));
 
         Member member = new Member(username, age);
-        memberRepository.save(member);
+        Member save = memberRepository.save(member);
 
         //Modelㅇㅔ 데이터를 보관한다.
-        request.setAttribute("member", member);
-        return new MyView("WEB-INF/views/save-result.jsp");
+        request.setAttribute("member", save);
+        return new MyView("/WEB-INF/views/save-result.jsp");
     }
 }
